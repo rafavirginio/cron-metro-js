@@ -3,8 +3,17 @@ let minutes = 0
 let hour = 0
 let interval
 
+function digits(digit) {
+  if (digit < 10) {
+    return '0' + digit
+  } else {
+    return digit
+  }
+}
+
 function start() {
-  interval = setInterval(timer, 1)
+  timer()
+  interval = setInterval(timer, 1000)
 }
 function pause() {
   clearInterval(interval)
@@ -27,5 +36,5 @@ function timer() {
     }
   }
   document.getElementById('timer').innerText =
-    hour + ':' + minutes + ':' + seconds
+    digits(hour) + ':' + digits(minutes) + ':' + digits(seconds)
 }
