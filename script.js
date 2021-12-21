@@ -22,7 +22,7 @@ function stop() {
   clearInterval(interval)
   seconds = 0
   minutes = 0
-  document.getElementById('timer').innerText = '00:00'
+  document.getElementById('timer').innerText = '00:00:00'
 }
 
 function timer() {
